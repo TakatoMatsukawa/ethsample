@@ -1,0 +1,8 @@
+// フォントサイズを比率ではなく個別指定したい場合に使用
+
+@mixin font-size($theme) {
+    font-size: map-get($theme, default-size);
+    h1 {
+        font-size: map-get($theme, h1-size);
+    }
+}

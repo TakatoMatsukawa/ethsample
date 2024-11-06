@@ -1,0 +1,23 @@
+{
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "printWidth": 200,
+    "trailingComma": "es5",
+    "plugins": ["@prettier/plugin-php"],
+    "overrides": [
+        {
+            "files": ["*.js", "*.json", "*.yml", "*.yaml"],
+            "options": {
+                "tabWidth": 2
+            }
+        },
+        {
+            "files": ["*.vue"],
+            "options": {
+                "singleQuote": false,
+                "semi": true
+            }
+        }
+    ]
+}

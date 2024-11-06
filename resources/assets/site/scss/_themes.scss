@@ -1,0 +1,12 @@
+@each $name, $theme in $bg-color-themes {
+    .#{$name} {
+        @include bg-color($theme);
+    }
+}
+
+// フォントサイズを比率ではなく個別指定したい場合に使用
+// @each $name, $theme in $font-size-themes {
+//     .#{$name} {
+//         @include font-size($theme);
+//     }
+// }

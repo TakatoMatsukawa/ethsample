@@ -1,0 +1,25 @@
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// FontAwesome
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts' !default;
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+
+// Variables
+@import 'variables';
+
+// mixins
+@import 'mixins/bgcolor';
+// フォントサイズを比率ではなく個別指定したい場合に使用
+// @import 'mixins/fontsize';
+
+@import 'themes';
+
+// Components
+@import 'components/snsbtn';
+
+// Custom Style
+@import 'product';

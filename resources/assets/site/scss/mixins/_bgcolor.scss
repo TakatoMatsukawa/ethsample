@@ -1,0 +1,21 @@
+// 背景色変更に係るスタイルを指定
+
+@mixin bg-color($theme) {
+    background-color: map-get($theme, body-bg);
+    color: map-get($theme, body-text);
+    header {
+        background-color: map-get($theme, header-bg);
+    }
+    footer {
+        background-color: map-get($theme, footer-bg);
+    }
+    a {
+        color: map-get($theme, a-text);
+        &.btn {
+            color: $a-btn;
+        }
+        &.btn-iiif {
+            color: map-get($theme, a-iiif);
+        }
+    }
+}

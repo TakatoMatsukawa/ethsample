@@ -1,0 +1,14 @@
+//
+// Custom Variables
+//
+// Here you can add your own variables overrides
+//
+// The file is included before any other variable file,
+// so you can override them because they all use !default
+// --------------------------------------------------
+
+// For example, changing the primary color
+// $primary: #a48ad4;
+
+$body-bg-blue: light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+$body-bg-gray: #9faec1;

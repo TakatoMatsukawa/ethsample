@@ -1,0 +1,41 @@
+// common
+$a-btn: white;
+
+// 背景色変更に係る変数
+$bg-color-themes: (
+    background-color-dark: (
+        body-bg: #282c34,
+        body-text: white,
+        header-bg: gray,
+        footer-bg: gray,
+        a-text: yellow,
+        a-iiif: black,
+    ),
+    background-color-blue: (
+        body-bg: rgb(79, 79, 248),
+        body-text: white,
+        header-bg: gray,
+        footer-bg: gray,
+        a-text: yellow,
+        a-iiif: black,
+    ),
+    background-color-white: (
+        body-bg: white,
+        body-text: black,
+        header-bg: gray,
+        footer-bg: gray,
+        a-text: blue,
+        a-iiif: black,
+    ),
+);
+// 文字サイズ変更に係る変数
+$font-size-themes: (
+    font-size-large: (
+        default-size: 20px,
+        h1-size: 40px,
+    ),
+    font-size-normal: (
+        default-size: 16px,
+        h1-size: 32px,
+    ),
+);

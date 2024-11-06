@@ -7,6 +7,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
+            'resources/assets/site/scss/main.scss',
             'resources/assets/admin/scss/main.scss',
             'resources/js/app.js',
             'resources/js/iiif/index.js',

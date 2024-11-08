@@ -44,7 +44,7 @@ const endViewItemsNum = computed(() => {
 </script>
 
 <template>
-    <Head title="古文書一覧" />
+    <Head :title="$t('manuscript_list')" />
 
     <MainLayout>
         <div class="content w-100">
@@ -58,7 +58,7 @@ const endViewItemsNum = computed(() => {
                                 <div class="row mb-2">
                                     <div class="col-md-3">
                                         <div class="mb-4">
-                                            <label class="form-label" for="select_license">ライセンス</label>
+                                            <label class="form-label" for="select_license">{{ $t("license") }}</label>
                                             <select class="form-select" id="select_license" name="select_license" v-model="form.select_license">
                                                 <option v-for="l in props.license_list" :value="l.key">{{ l.value }}</option>
                                             </select>
@@ -68,9 +68,16 @@ const endViewItemsNum = computed(() => {
                                 <div class="row mb-2">
                                     <div class="col-md-6">
                                         <div class="mb-4">
-                                            <label class="form-label" for="input_keyword">キーワード</label>
+                                            <label class="form-label" for="input_keyword">{{ $t("keyword") }}</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="input_keyword" name="input_keyword" placeholder="資料名、作成者、内容…" v-model="form.input_keyword" />
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="input_keyword"
+                                                    name="input_keyword"
+                                                    :placeholder="$t('name') + ', ' + $t('keyword')"
+                                                    v-model="form.input_keyword"
+                                                />
                                                 <select class="form-select" id="select_search" name="select_search" v-model="form.select_search">
                                                     <option v-for="s in props.select_search_list" :value="s.key">{{ s.value }}</option>
                                                 </select>
@@ -79,7 +86,7 @@ const endViewItemsNum = computed(() => {
                                     </div>
                                 </div>
                                 <div class="mb-4">
-                                    <button type="submit" :disabled="form.processing" class="btn btn-primary">検索する</button>
+                                    <button type="submit" :disabled="form.processing" class="btn btn-primary">{{ $t("search") }}</button>
                                 </div>
                             </div>
                         </form>
@@ -97,9 +104,9 @@ const endViewItemsNum = computed(() => {
                                 <thead>
                                     <tr>
                                         <th>No.</th>
-                                        <th>サムネイル</th>
-                                        <th>資料名</th>
-                                        <th>作者名</th>
+                                        <th>{{ $t("thumbnail") }}</th>
+                                        <th>{{ $t("name") }}</th>
+                                        <th>{{ $t("writer") }}</th>
                                         <th>IIIF</th>
                                         <th></th>
                                     </tr>
@@ -111,7 +118,7 @@ const endViewItemsNum = computed(() => {
                                         <!-- サムネイル -->
                                         <td>
                                             <Link :href="route('manuscript.detail', { manuscript: manuscript.id })"
-                                                ><img v-if="manuscript.thumbnail" :src="manuscript.thumbnail" alt="サムネイル" width="100"
+                                                ><img v-if="manuscript.thumbnail" :src="manuscript.thumbnail" :alt="$t('thumbnail')" width="100"
                                             /></Link>
                                         </td>
                                         <!-- 資料名 -->
@@ -126,7 +133,9 @@ const endViewItemsNum = computed(() => {
                                         </td>
                                         <!-- 詳細 -->
                                         <td>
-                                            <Link :href="route('manuscript.detail', { manuscript: manuscript.id })" type="button" class="btn btn-primary btn-sm table-btn" title="詳細"> 詳細 </Link>
+                                            <Link :href="route('manuscript.detail', { manuscript: manuscript.id })" type="button" class="btn btn-primary btn-sm table-btn" :title="$t('detail')">
+                                                {{ $t("detail") }}</Link
+                                            >
                                         </td>
                                     </tr>
                                 </tbody>
@@ -135,7 +144,7 @@ const endViewItemsNum = computed(() => {
                     </div>
                 </div>
                 <div v-else>
-                    <p>検索内容に該当するものはございません。</p>
+                    <p>{{ $t("not_hit") }}</p>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ const miradorInstance = ref(null);
 onMounted(() => {
     const config = {
         id: "mirador",
-        language: "ja",
+        language: "en",
         windows: [
             {
                 loadedManifest: props.manifest,

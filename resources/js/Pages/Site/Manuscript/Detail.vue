@@ -36,7 +36,7 @@ const url = location.href;
                                 <dd class="col-12 col-sm-10">
                                     <a class="btn btn-primary rounded-1" :href="value['file']" target="_blank">
                                         <i class="fa-solid fa-download"></i>
-                                        PDFファイルを見る
+                                        {{ $t("view_pdf") }}
                                     </a>
                                     <FileSizeDetail :file="value['file']" :fileSize="value['size']" />
                                 </dd>
@@ -44,13 +44,13 @@ const url = location.href;
                         </dl>
 
                         <div class="border border-start-0 border-end-0 border-dark mb-3">
-                            <p class="py-2 px-2 mb-0">ライセンス</p>
+                            <p class="py-2 px-2 mb-0">{{ $t("license") }}</p>
                         </div>
                         <LicenseDetail :license="manuscript.license" />
 
                         <p class="text-center" v-if="manuscript.iiifURL !== null">
                             <a class="btn btn-light btn-iiif mt-3 mb-2 border" :href="manuscript.iiifURL" target="_blank">
-                                <img src="/assets/img/i3f.png" style="height: 22px; margin-top: -5px" />&nbsp;ビューアーで見る&nbsp;
+                                <img src="/assets/img/i3f.png" style="height: 22px; margin-top: -5px" />&nbsp;{{ $t("view_in_viewer") }}&nbsp;
                                 <i class="fa-solid fa-up-right-from-square"></i>
                             </a>
                         </p>
@@ -61,23 +61,23 @@ const url = location.href;
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th>資料名</th>
+                                    <th>{{ $t("name") }}</th>
                                     <td>{{ manuscript.name }}</td>
                                 </tr>
                                 <tr>
-                                    <th>作者名</th>
+                                    <th>{{ $t("writer") }}</th>
                                     <td>{{ manuscript.writer }}</td>
                                 </tr>
                                 <tr>
-                                    <th>時代</th>
+                                    <th>{{ $t("era") }}</th>
                                     <td>{{ manuscript.era }}</td>
                                 </tr>
                                 <tr>
-                                    <th>内容</th>
+                                    <th>{{ $t("description") }}</th>
                                     <td>{{ manuscript.description }}</td>
                                 </tr>
                                 <tr>
-                                    <th>IIIFマニフェスト</th>
+                                    <th>{{ $t("iiif_manifest") }}</th>
                                     <td>
                                         {{ manuscript.iiifManifest }}
                                     </td>

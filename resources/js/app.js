@@ -21,7 +21,7 @@ const i18n = createI18n({
 
 window.bootstrap = bootstrap;
 
-const appName = import.meta.env.VITE_APP_NAME || '佐川町立図書館データベース';
+const appName = import.meta.env.VITE_APP_NAME || 'Ethiopia Library Database';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

@@ -3,6 +3,7 @@ import { Link } from "@inertiajs/vue3";
 const props = defineProps({
     breadcrumb: Object,
 });
+console.log(props.breadcrumb);
 </script>
 <template>
     <nav aria-label="breadcrumb">

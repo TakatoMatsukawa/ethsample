@@ -189,6 +189,15 @@ class Manuscript extends Model
      */
     public function collectionName(): string
     {
-        return '古文書';
+        $name = '';
+        // 言語切り替え対応
+        if (app()->getLocale() === 'en') {
+            $name = 'Manuscript';
+        } elseif (app()->getLocale() === 'am') {
+            $name = 'ጥንታዊ ሰነዶች';
+        } elseif (app()->getLocale() === 'ja') {
+            $name = '古文書';
+        }
+        return $name;
     }
 }

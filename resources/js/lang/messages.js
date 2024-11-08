@@ -2,7 +2,7 @@ export default {
     // 言語切り替え対応
     en: {
         // header
-        site_title:'Sample Database Admin Panel Page',
+        admin_title:'Ethiopia Library Database Admin Panel Page',
         language: 'Language',
         japanese: 'Japanese',
         english: 'English',
@@ -75,10 +75,39 @@ export default {
         login_text: 'Please enter your login ID and password, and click ‘Login’.',
         login_id: 'Login ID(Email)',
         password: 'Password',
+
+        // Site
+        // Header
+        site_title: 'Ethiopia Library Database',
+        cross_search: 'Cross Search',
+        search_keyword: 'Keyword Search',
+        menu: 'Menu',
+        // App
+        top: 'TOP Page',
+        search_by_category: 'SEARCH BY CATEGORY',
+        // Detail
+        view_pdf: 'View PDF',
+        view_in_viewer: 'View in Mirador Viewer',
+        iiif_manifest: 'IIIF Manifest',
+        // Index
+        detail: 'Detail',
+        not_hit: 'There are no results matching your search.',
+        // Search
+        search_list: 'Cross Search List',
+        collection_name: 'Collection Name',
+        not_input_keyword: 'Please enter a keyword.',
+        // Carousel
+        cross_search_description: 'You can search all materials in the Ethiopian Library database at once.',
+        // License
+        only_view_text: 'Any unauthorized copying, modification, distribution or reproduction is prohibited.',
+        add_conditions: '(Additional conditions apply)',
+        // ShareSNSButton
+        facebook_share: 'Share',
+        x_share: 'Post',
     },
     am: {
         // header
-        site_title:'የናሙና የውሂብ ጎታ አስተዳዳሪ ፓነል ገጽ',
+        admin_title:'የኢትዮጵያ ቤተ መፃህፍት ዳታቤዝ አስተዳዳሪ ፓነል ገጽ',
         language: 'ቋንቋ',
         japanese: 'ጃፓንኛ',
         english: 'እንግሊዝኛ',
@@ -151,10 +180,39 @@ export default {
         login_text:"እባክዎ የመግቢያ መታወቂያዎን እና የይለፍ ቃልዎን ያስገቡ እና 'Login' ን ጠቅ ያድርጉ።",
         login_id:'የመግቢያ መታወቂያ(ኢሜል)',
         password:'የይለፍ ቃል',
+
+        // Site
+        // Header
+        site_title: 'የኢትዮጵያ ቤተ መፃህፍት ዳታቤዝ',
+        cross_search: 'ተሻጋሪ ፍለጋ',
+        search_keyword: 'ቁልፍ ቃል ፍለጋ',
+        menu: 'ምናሌ',
+        // App
+        top: 'የላይኛው ገጽ',
+        search_by_category: 'በምድብ ይፈልጉ',
+        // Detail
+        view_pdf: 'ፒዲኤፍ ይመልከቱ',
+        view_in_viewer: 'በሚራዶር መመልከቻ ውስጥ ይመልከቱ',
+        iiif_manifest: 'IIIF መግለጫ',
+        // Index
+        detail: 'ዝርዝር',
+        not_hit: 'ከፍለጋዎ ጋር የሚዛመዱ ምንም ውጤቶች የሉም።',
+        // Search
+        search_list: 'ተሻጋሪ የፍለጋ ዝርዝር',
+        collection_name: 'የስብስብ ስም',
+        not_input_keyword: 'እባክህ ቁልፍ ቃል አስገባ።',
+        // Carousel
+        cross_search_description: 'በኢትዮጵያ ቤተ መፃህፍት ዳታቤዝ ውስጥ ያሉትን ሁሉንም እቃዎች በአንድ ጊዜ መፈለግ ትችላለህ።',
+        // License
+        only_view_text: 'ያልተፈቀደ ማባዛት፣ ማሻሻል፣ ማሰራጨት እና እንደገና ማተም የተከለከለ ነው።',
+        add_conditions: '(ተጨማሪ ሁኔታዎች ተፈጻሚ ይሆናሉ)',
+        // ShareSNSButton
+        facebook_share: 'አጋራ',
+        x_share: 'ለጥፍ',
     },
     ja: {
         // header
-        site_title:'サンプルデータベース管理者画面ページ',
+        admin_title:'エチオピア図書館データベース管理者画面ページ',
         language: '言語',
         japanese: '日本語',
         english: '英語',
@@ -228,5 +286,33 @@ export default {
         login_id: 'ログインID（メールアドレス）',
         password: 'パスワード',
 
+        // Site
+        // Header
+        site_title: 'エチオピア図書館データベース',
+        cross_search: '横断検索',
+        search_keyword: 'キーワード検索',
+        menu: 'メニュー',
+        // App
+        top: 'TOPページ',
+        search_by_category: '資料別に探す',
+        // Detail
+        view_pdf: 'PDFファイルを見る',
+        view_in_viewer: 'ビューワーで見る',
+        iiif_manifest: 'IIIFマニフェスト',
+        // Index
+        detail: '詳細',
+        not_hit: '検索内容に該当するものはございません。',
+        // Search
+        search_list: '横断検索一覧',
+        collection_name: 'コレクション名',
+        not_input_keyword: 'キーワードを入力してください',
+        // Carousel
+        cross_search_description: 'エチオピア図書館データベース内にある資料を一括して検索することができます。',
+        // License
+        only_view_text: '無断での複製、改変、配布、転載を禁止します。',
+        add_conditions: '（追加条件あり）',
+        // ShareSNSButton
+        facebook_share: 'シェアする',
+        x_share: 'ポスト',
     },
 }

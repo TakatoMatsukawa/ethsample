@@ -47,12 +47,12 @@ if (Object.keys(props.errors).length !== 0) {
 </script>
 
 <template>
-    <Head title="横断検索一覧" />
+    <Head :title="$t('search_list')" />
 
     <MainLayout>
         <div class="content w-100">
             <div class="container">
-                <Breadcrumb :breadcrumbs="props.breadcrumb" />
+                <Breadcrumb :breadcrumb="breadcrumb" />
                 <!-- Search Box -->
                 <div class="block">
                     <div class="row">
@@ -61,9 +61,16 @@ if (Object.keys(props.errors).length !== 0) {
                                 <div class="row mb-2">
                                     <div class="col-md-6">
                                         <div class="mb-4">
-                                            <label class="form-label" for="input_keyword">キーワード</label>
+                                            <label class="form-label" for="input_keyword">{{ $t("keyword") }}</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="input_keyword" name="input_keyword" placeholder="資料名、作成者、内容…" v-model="form.input_keyword" />
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="input_keyword"
+                                                    name="input_keyword"
+                                                    :placeholder="$t('name') + ', ' + $t('keyword')"
+                                                    v-model="form.input_keyword"
+                                                />
                                                 <select class="form-select" id="select_search" name="select_search" v-model="form.select_search">
                                                     <option v-for="s in props.select_search_list" :value="s.key">{{ s.value }}</option>
                                                 </select>
@@ -72,7 +79,7 @@ if (Object.keys(props.errors).length !== 0) {
                                     </div>
                                 </div>
                                 <div class="mb-4">
-                                    <button type="submit" :disabled="form.processing" class="btn btn-primary">検索する</button>
+                                    <button type="submit" :disabled="form.processing" class="btn btn-primary">{{ $t("search") }}</button>
                                 </div>
                             </div>
                         </form>
@@ -90,9 +97,9 @@ if (Object.keys(props.errors).length !== 0) {
                                 <thead>
                                     <tr>
                                         <th>No.</th>
-                                        <th>コレクション名</th>
-                                        <th>サムネイル</th>
-                                        <th>資料名</th>
+                                        <th>{{ $t("collection_name") }}</th>
+                                        <th>{{ $t("thumbnail") }}</th>
+                                        <th>{{ $t("name") }}</th>
                                         <th>IIIF</th>
                                         <th></th>
                                     </tr>
@@ -105,7 +112,7 @@ if (Object.keys(props.errors).length !== 0) {
                                         <td>{{ search.collection }}</td>
                                         <!-- サムネイル -->
                                         <td>
-                                            <Link :href="route(search.detail, search.id)"><img v-if="search.thumbnail" :src="search.thumbnail" alt="サムネイル" width="100" /></Link>
+                                            <Link :href="route(search.detail, search.id)"><img v-if="search.thumbnail" :src="search.thumbnail" :alt="$t('thumbnail')" width="100" /></Link>
                                         </td>
                                         <!-- 資料名 -->
                                         <td>{{ search.name }}</td>
@@ -117,7 +124,7 @@ if (Object.keys(props.errors).length !== 0) {
                                         </td>
                                         <!-- 詳細 -->
                                         <td>
-                                            <Link :href="route(search.detail, search.id)" type="button" class="btn btn-primary btn-sm table-btn" title="詳細"> 詳細 </Link>
+                                            <Link :href="route(search.detail, search.id)" type="button" class="btn btn-primary btn-sm table-btn" :title="$t('detail')">{{ $t("detail") }} </Link>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -126,8 +133,8 @@ if (Object.keys(props.errors).length !== 0) {
                     </div>
                 </div>
                 <div v-else>
-                    <p v-if="props.input_keyword === ''">検索キーワードを入力してください。</p>
-                    <p v-else>検索内容に該当するものはございません。</p>
+                    <p v-if="props.input_keyword === ''">{{ $t("not_input_keyword") }}</p>
+                    <p v-else>{{ $t("not_hit") }}</p>
                 </div>
             </div>
         </div>

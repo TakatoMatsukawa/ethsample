@@ -3,20 +3,19 @@ const props = defineProps({
     totalViewItemsNum: Number,
     startViewItemsNum: Number,
     endViewItemsNum: Number,
-})
+});
 
 function number_format(num) {
     return num.toString().replace(/(\d+?)(?=(?:\d{3})+$)/g, function (x) {
-        return x + ','
-    })
+        return x + ",";
+    });
 }
+const locale = __locale;
 </script>
 
 <template>
-    <p>
-        {{ number_format(totalViewItemsNum) }}件中
-        {{ number_format(startViewItemsNum) }}-{{
-            number_format(endViewItemsNum)
-        }}件を表示
-    </p>
+    <!-- 言語切り替え対応 -->
+    <p v-if="locale == 'en'">Displaying {{ number_format(startViewItemsNum) }}-{{ number_format(endViewItemsNum) }} of {{ number_format(totalViewItemsNum) }} items</p>
+    <p v-if="locale == 'am'">ከ{{ number_format(totalViewItemsNum) }}ንጥሎች{{ number_format(startViewItemsNum) }}-{{ number_format(endViewItemsNum) }}በማሳየት ላይ</p>
+    <p v-if="locale == 'ja'">{{ number_format(totalViewItemsNum) }}件中 {{ number_format(startViewItemsNum) }}-{{ number_format(endViewItemsNum) }}件を表示</p>
 </template>

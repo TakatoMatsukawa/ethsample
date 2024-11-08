@@ -47,7 +47,7 @@ class ManuscriptDetailResponse extends Response
         // IIIFマニフェスト
         $iiifURL = null;
         $iiifManifest = null;
-        if ($this->manuscript->iiif === IiifEnum::EXIST) {
+        if ($this->manuscript->iiif_flg === IiifEnum::EXIST) {
             $iiifURL = config('iiif.iiif_url') . "?uid={$this->manuscript->unique_id}";
             $iiifManifest = config('app.url') . '/' . $this->manuscript->unique_id . '/manifest';
         }
@@ -100,7 +100,24 @@ class ManuscriptDetailResponse extends Response
      */
     protected function getFormBreadcrumb(): array
     {
-        $breadcrumb = [['name' => 'TOPページ', 'link' => '/'], ['name' => '古文書一覧', 'link' => '/manuscript'], ['name' => $this->manuscript->name, 'link' => '']];
+        // 言語切り替え対応
+        $topName = '';
+        if (app()->getLocale() === 'en') {
+            $topName = 'TOP Page';
+        } elseif (app()->getLocale() === 'am') {
+            $topName = 'የላይኛው ገጽ';
+        } elseif (app()->getLocale() === 'ja') {
+            $topName = 'TOPページ';
+        }
+        $listName = '';
+        if (app()->getLocale() === 'en') {
+            $listName = 'Manuscript List';
+        } elseif (app()->getLocale() === 'am') {
+            $listName = 'የጥንት ሰነዶች ዝርዝር';
+        } elseif (app()->getLocale() === 'ja') {
+            $listName = '古文書一覧';
+        }
+        $breadcrumb = [['name' => $topName, 'link' => '/'], ['name' => $listName, 'link' => '/manuscript'], ['name' => $this->manuscript->name, 'link' => '']];
         return $breadcrumb;
     }
 }

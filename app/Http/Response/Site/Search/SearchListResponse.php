@@ -187,7 +187,24 @@ class SearchListResponse extends Response
      */
     protected function getFormBreadcrumb(): array
     {
-        $breadcrumb = [['name' => 'TOPページ', 'link' => '/'], ['name' => '横断検索結果', 'link' => '']];
+        // 言語切り替え対応
+        $topName = '';
+        if (app()->getLocale() === 'en') {
+            $topName = 'TOP Page';
+        } elseif (app()->getLocale() === 'am') {
+            $topName = 'የላይኛው ገጽ';
+        } elseif (app()->getLocale() === 'ja') {
+            $topName = 'TOPページ';
+        }
+        $listName = '';
+        if (app()->getLocale() === 'en') {
+            $listName = 'Cross Search List';
+        } elseif (app()->getLocale() === 'am') {
+            $listName = 'ተሻጋሪ የፍለጋ ዝርዝር';
+        } elseif (app()->getLocale() === 'ja') {
+            $listName = '横断検索一覧';
+        }
+        $breadcrumb = [['name' => $topName, 'link' => '/'], ['name' => $listName, 'link' => '']];
         return $breadcrumb;
     }
 }

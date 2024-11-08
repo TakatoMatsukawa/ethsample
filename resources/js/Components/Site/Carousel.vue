@@ -30,12 +30,12 @@ const CarouselData = [
             <div class="carousel-caption__search">
                 <form action="/search" method="GET" class="form-search d-flex" role="search">
                     <div class="form-search__group input-group">
-                        <span class="form-search__label input-group-text rounded-start-1 d-none d-md-block" id="cross-search1"> 横断検索 </span>
+                        <span class="form-search__label input-group-text rounded-start-1 d-none d-md-block" id="cross-search1"> {{ $t("cross_search") }} </span>
                         <input
                             type="text"
                             name="input_keyword"
                             class="form-control form-search__input"
-                            placeholder="キーワード検索"
+                            :placeholder="$t('search_keyword')"
                             aria-label="cross-search"
                             aria-describedby="cross-search1"
                             maxlength="50"
@@ -48,7 +48,7 @@ const CarouselData = [
                 </form>
             </div>
             <div class="carousel-caption__description">
-                <p class="caption-text">佐川町立図書館データベース内にある資料を一括して検索することができます。</p>
+                <p class="caption-text">{{ $t("cross_search_description") }}</p>
             </div>
         </div>
     </div>

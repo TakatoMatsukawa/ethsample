@@ -17,7 +17,7 @@ const store = useTemplateStore();
                     <i class="fa fa-fw fa-bars"></i>
                 </button>
                 <!-- END Toggle Sidebar -->
-                {{ $t("site_title") }}
+                {{ $t("admin_title") }}
             </div>
             <!-- END Left Section -->
 

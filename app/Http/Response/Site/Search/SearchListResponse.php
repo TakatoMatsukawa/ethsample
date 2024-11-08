@@ -127,7 +127,7 @@ class SearchListResponse extends Response
 
             $iiif = null;
             if ($search->iiif_flg === IiifEnum::EXIST) {
-                $iiif = config('iiif.iiif_url') . "?uid={$search->unique_id}";
+                $iiif = config('iiif.iiif_url') . "/{$search->unique_id}";
             }
 
             // コレクション名（各Modelで定義）

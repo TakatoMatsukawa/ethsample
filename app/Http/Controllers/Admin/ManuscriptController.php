@@ -225,7 +225,7 @@ class ManuscriptController extends Controller
         if ($data['method'] === 'create') {
             $this->setActivity('Created IIIF Manifest of Manuscript（ID=' . $manuscript->unique_id . ':' . \Str::limit($manuscript->name, 50, '…') . '）', 2);
         } elseif ($data['method'] === 'update') {
-            $this->setActivity('Updated IIIF Manifest of Manuscript（ID=' . $manuscript->unique_id . ':' . \Str::limit($manuscript->name, 50, '…') . '）のIIIFマニフェストを更新しました。', 3);
+            $this->setActivity('Updated IIIF Manifest of Manuscript（ID=' . $manuscript->unique_id . ':' . \Str::limit($manuscript->name, 50, '…') . '）', 3);
         }
         return $response->response($data);
     }

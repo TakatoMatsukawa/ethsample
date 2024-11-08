@@ -73,12 +73,6 @@ const store = useTemplateStore();
                     </button>
                     <div class="dropdown-menu dropdown-menu-md dropdown-menu-end p-0 border-0" aria-labelledby="page-header-user-dropdown">
                         <div class="p-2">
-                            <a class="dropdown-item d-flex align-items-center justify-content-between" href="">
-                                <span class="fs-sm fw-medium">{{ $t("profile") }}</span>
-                            </a>
-                        </div>
-                        <div role="separator" class="dropdown-divider m-0"></div>
-                        <div class="p-2">
                             <Link :href="route('logout')" method="post" class="text-black dropdown-item d-flex align-items-center justify-content-between" as="button">
                                 <span class="fs-sm fw-medium"> {{ $t("logout") }} </span></Link
                             >

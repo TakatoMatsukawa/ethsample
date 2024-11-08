@@ -101,6 +101,7 @@ export default {
         // License
         only_view_text: 'Any unauthorized copying, modification, distribution or reproduction is prohibited.',
         add_conditions: '(Additional conditions apply)',
+        public_domain: 'Public Domain',
         // ShareSNSButton
         facebook_share: 'Share',
         x_share: 'Post',
@@ -206,6 +207,7 @@ export default {
         // License
         only_view_text: 'ያልተፈቀደ ማባዛት፣ ማሻሻል፣ ማሰራጨት እና እንደገና ማተም የተከለከለ ነው።',
         add_conditions: '(ተጨማሪ ሁኔታዎች ተፈጻሚ ይሆናሉ)',
+        public_domain: 'የህዝብ ጎራ',
         // ShareSNSButton
         facebook_share: 'አጋራ',
         x_share: 'ለጥፍ',
@@ -311,6 +313,7 @@ export default {
         // License
         only_view_text: '無断での複製、改変、配布、転載を禁止します。',
         add_conditions: '（追加条件あり）',
+        public_domain: 'パブリックドメイン',
         // ShareSNSButton
         facebook_share: 'シェアする',
         x_share: 'ポスト',

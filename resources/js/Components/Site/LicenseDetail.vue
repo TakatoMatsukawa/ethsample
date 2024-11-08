@@ -18,7 +18,7 @@ const props = defineProps({
                 </small>
             </template>
             <template v-else-if="license.num === '1'">
-                <small class="fs-7"> パブリックドメイン </small>
+                <small class="fs-7"> {{ $t("public_domain") }} </small>
             </template>
             <template v-else-if="license.num === '8'">
                 <small class="d-block mb-1">{{ $t("add_conditions") }} </small>

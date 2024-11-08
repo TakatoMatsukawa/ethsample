@@ -69,7 +69,7 @@ return [
         // tiff画像を保存しているディレクトリ
         'iiifimages_directory' => [
             'driver' => 'local',
-            'root' => base_path('../../iiifimages'),
+            'root' => base_path('../iiifimages'),
         ],
     ],
 

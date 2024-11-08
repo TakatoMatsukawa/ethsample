@@ -11,8 +11,10 @@ const offCanvasMenu = {
         <nav class="navbar bg-body-tertiary">
             <div class="container-lg">
                 <Link class="navbar-brand header-brand" href="/">
-                    <span>{{ $t("site_title") }}</span>
-                    <img class="header-brand__image img-fluid ms-3" src="/assets/img/Flag_of_Ethiopia.svg" />
+                    <div class="w-100">
+                        <span>{{ $t("site_title") }}</span>
+                        <img class="header-brand__image img-fluid ms-3 d-none d-md-inline" src="/assets/img/Flag_of_Ethiopia.svg" />
+                    </div>
                 </Link>
                 <div class="d-flex">
                     <form class="mx-3 header-search d-none d-lg-flex form-search" action="/search" method="GET" role="search">
@@ -35,7 +37,7 @@ const offCanvasMenu = {
                         </div>
                     </form>
                     <!-- END Search Form -->
-                    <div class="mx-3 dropdown my-auto d-none d-lg-block">
+                    <div class="mx-3 dropdown my-auto d-none d-xl-block">
                         <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-globe ms-1 mt-1"></i> <span class="ms-2">{{ $t("language") }}</span>
                         </a>
@@ -90,7 +92,7 @@ const offCanvasMenu = {
                                     </button>
                                 </div>
                             </form>
-                            <div class="mx-3 dropdown my-auto d-lg-none mt-2">
+                            <div class="mx-3 dropdown my-auto d-xl-none mt-2">
                                 <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fa-solid fa-globe ms-1 mt-1"></i> <span class="ms-2">{{ $t("language") }}</span>
                                 </a>
@@ -126,7 +128,7 @@ const offCanvasMenu = {
     .navbar {
         .header-brand {
             &__image {
-                height: 70px;
+                height: 60px;
             }
         }
     }

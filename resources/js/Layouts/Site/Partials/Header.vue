@@ -11,7 +11,7 @@ const offCanvasMenu = {
             <div class="container-lg">
                 <Link class="navbar-brand header-brand" href="/">
                     <span>エチオピア図書館</span>
-                    <img class="header-brand__image img-fluid ms-3" src="assets/img/Flag_of_Ethiopia.svg" />
+                    <img class="header-brand__image img-fluid ms-3" src="/assets/img/Flag_of_Ethiopia.svg" />
                 </Link>
                 <div class="d-flex">
                     <form class="mx-3 header-search d-none d-lg-flex form-search" action="/search" method="GET" role="search">

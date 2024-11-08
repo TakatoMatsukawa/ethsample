@@ -23,8 +23,8 @@ use App\Http\Controllers\Admin\ManuscriptController as AdminManuscriptController
 //環境によるミドルウェア切り替え、ドメインの取得
 switch (config('app.env')) {
     case 'production':
-        $AddSiteMiddlewares = [LocaleMiddleware::class];
-        $AddAdminMiddlewares = [LocaleMiddleware::class];
+        $AddSiteMiddlewares = [LocaleMiddleware::class, BasicAuthMiddleware::class];
+        $AddAdminMiddlewares = [LocaleMiddleware::class, BasicAuthMiddleware::class];
         $siteDomain = config('app.url');
         $adminDomain = config('app.admin_url');
         break;

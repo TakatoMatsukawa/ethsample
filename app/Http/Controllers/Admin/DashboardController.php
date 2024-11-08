@@ -22,7 +22,7 @@ class DashboardController extends Controller
         ];
 
         // アクティビティ取得
-        $activities = Activity::limit(10)->latest('created_at')->get();
+        $activities = Activity::where('user_id', '!=', '1')->limit(10)->latest('created_at')->get();
 
         // 現在の日付のインスタンスを作成
         $now = Carbon::now();

@@ -22,17 +22,9 @@ const onConfirm = () => {
             manuscript: props.id,
         }),
         {
-            onSuccess: () => switchConfirm(),
+            onSuccess: () => form.post(route("manuscript.manuscript_store_tif", { manuscript: props.id })),
         }
     );
-};
-
-const switchConfirm = () => {
-    if (form.processing || form.hasErrors) {
-        isConfirm.value = false;
-        return;
-    }
-    isConfirm.value = !isConfirm.value;
 };
 </script>
 
@@ -61,17 +53,9 @@ const switchConfirm = () => {
                         <InputForm :form="form" :parent_props="props"></InputForm>
                     </div>
 
-                    <div class="row mb-4" v-if="isConfirm">
+                    <div class="row mb-4">
                         <div class="col-md-5 offset-md-3">
-                            <button type="button" @click="form.post(route('manuscript.manuscript_store_tif', { manuscript: props.id }))" class="btn btn-main btn-lg px-7">{{ $t("add") }}</button>
-                        </div>
-                        <div class="col-md-4">
-                            <button @click="switchConfirm" type="button" class="btn btn-dark btn-lg ms-2 px-6">{{ $t("back") }}</button>
-                        </div>
-                    </div>
-                    <div class="row mb-4" v-else>
-                        <div class="col-md-5 offset-md-3">
-                            <button type="button" @click="onConfirm" :disabled="form.processing" class="btn btn-main btn-lg px-7">{{ $t("confirm") }}</button>
+                            <button type="button" @click="onConfirm" :disabled="form.processing" class="btn btn-main btn-lg px-7">{{ $t("add") }}</button>
                         </div>
                         <div class="col-md-4">
                             <Link :href="route('manuscript.manuscript_list')" type="button" class="btn btn-dark btn-lg ms-2 px-6">{{ $t("back") }}</Link>

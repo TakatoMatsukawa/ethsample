@@ -25,6 +25,9 @@ class ManuscriptStoreTifDomain
             $error = '';
         } else {
             $error = implode(', ', $outputs);
+            if ($error == '') {
+                $error = 'error';
+            }
         }
         return $error;
     }

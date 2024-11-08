@@ -25,7 +25,7 @@ const parent_props = props.parent_props;
                 id="input_image"
                 @input="form.input_image = $event.target.files[0]"
             />
-            <p class="fs-sm text-muted mb-0"></p>
+            <p class="fs-sm text-muted mb-0">{{ $t("tif_recommendation") }}</p>
             <div class="invalid-feedback">{{ parent_props.errors.input_image }}</div>
         </div>
         <div class="col-md-9" v-else>
@@ -35,6 +35,7 @@ const parent_props = props.parent_props;
                     {{ form.input_image.name }}
                 </span>
             </div>
+            <p class="fs-sm text-muted mb-0">{{ $t("tif_recommendation") }}</p>
             <div class="custom-error">{{ parent_props.errors.input_image }}</div>
         </div>
     </div>

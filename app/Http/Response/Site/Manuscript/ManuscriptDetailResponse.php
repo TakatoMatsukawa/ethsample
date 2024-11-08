@@ -48,7 +48,7 @@ class ManuscriptDetailResponse extends Response
         $iiifURL = null;
         $iiifManifest = null;
         if ($this->manuscript->iiif_flg === IiifEnum::EXIST) {
-            $iiifURL = config('iiif.iiif_url') . "/{$this->manuscript->unique_id}";
+            $iiifURL = config('iiif.iiif_url') . "{$this->manuscript->unique_id}";
             $iiifManifest = config('app.url') . '/' . $this->manuscript->unique_id . '/manifest';
         }
 

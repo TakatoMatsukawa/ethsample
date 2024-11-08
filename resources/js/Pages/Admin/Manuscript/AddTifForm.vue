@@ -21,7 +21,7 @@ const parent_props = props.parent_props;
                 class="form-control"
                 :class="{ 'is-invalid': !!parent_props.errors.input_image }"
                 type="file"
-                accept=".jpeg,.jpg,.png"
+                accept=".jpeg,.jpg"
                 id="input_image"
                 @input="form.input_image = $event.target.files[0]"
             />

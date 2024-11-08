@@ -76,11 +76,11 @@ class CreateIIIFManifestJson
             '@id' => $frontURL . '/' . $iiifCode . '/manifest',
             'label' => $label,
             'metadata' => $metadata,
-            'viewingDirection' => 'right-to-left',
-            'viewingHint' => 'paged',
+            'viewingDirection' => 'right-to-left', //左送り
+            // 'viewingHint' => 'paged', // 見開き
             // DBと利用規約ページURL
             'license' => $license,
-            'attribution' => '佐川町立図書館 Sakawa Town Library, JAPAN',
+            'attribution' => 'Ethiopia Library, ETHIOPIA',
             // ロゴURL
             'logo' => $frontURL . '/assets/img/logo.png',
             'sequences' => [
@@ -94,7 +94,7 @@ class CreateIIIFManifestJson
                     // tifのディレクトリ + range/r0
                     '@id' => $frontURL . '/view/' . $iiifCode . '/range/r0',
                     '@type' => 'sc:Range',
-                    'label' => '最初のページ',
+                    'label' => 'First Page',
                     // 1ページ目のcanvas
                     'canvases' => [$frontURL . '/view/' . $iiifCode . '/canvas/p1'],
                 ],
@@ -102,7 +102,7 @@ class CreateIIIFManifestJson
                     // tifのディレクトリ + range/r1
                     '@id' => $frontURL . '/view/' . $iiifCode . '/range/r1',
                     '@type' => 'sc:Range',
-                    'label' => '最後のページ',
+                    'label' => 'Last Page',
                     // 最後のページのcanvas
                     'canvases' => [$frontURL . '/view/' . $iiifCode . '/canvas/p' . $page],
                 ],

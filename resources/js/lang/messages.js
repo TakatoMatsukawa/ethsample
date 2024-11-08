@@ -34,7 +34,7 @@ export default {
         update_iiif: 'Update IIIF Manifest',
         create_tif:'Create Tif',
         source_image:'Source Image',
-        tif_recommendation:'DPI 300 or higher is recommended.',
+        tif_recommendation:'DPI 300 or higher is recommended. JPG files only.',
         // Form
         add: 'Add',
         update: 'Update',
@@ -110,7 +110,7 @@ export default {
         update_iiif:'IIIF አንጸባራቂን ያዘምኑ',
         create_tif:'ቲፍ ይፍጠሩ',
         source_image:'ምንጭ ምስል',
-        tif_recommendation:'DPI 300 ወይም ከዚያ በላይ ይመከራል።',
+        tif_recommendation:'DPI 300 ወይም ከዚያ በላይ ይመከራል። JPG ፋይሎች ብቻ።',
         // Form
         add:'አክል',
         update:'አዘምን',
@@ -186,7 +186,7 @@ export default {
         update_iiif: 'IIIFマニフェスト更新',
         create_tif:'TIF画像作成',
         source_image:'変換元画像',
-        tif_recommendation:'DPI300以上推奨。',
+        tif_recommendation:'DPI300以上推奨。JPGファイル指定。',
         // Form
         add: '追加する',
         update: '変更する',
